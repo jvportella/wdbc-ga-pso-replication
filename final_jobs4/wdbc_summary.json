@@ -1,0 +1,16 @@
+{
+  "base_accuracy_mean": 0.9646198830409356,
+  "base_accuracy_std": 0.01878311167061535,
+  "base_sensitivity_mean": 0.9420634920634918,
+  "base_sensitivity_std": 0.037350757749190444,
+  "base_specificity_mean": 0.9777777777777777,
+  "base_specificity_std": 0.024083896218127815,
+  "fs_accuracy_mean": 0.965204678362573,
+  "fs_accuracy_std": 0.015873830805389948,
+  "fs_sensitivity_mean": 0.9388888888888887,
+  "fs_sensitivity_std": 0.037350757749190444,
+  "fs_specificity_mean": 0.9805555555555556,
+  "fs_specificity_std": 0.018090520227304365,
+  "mean_n_features_selected": 17.033333333333335,
+  "mean_fs_seconds": 353.3714423576991
+}
