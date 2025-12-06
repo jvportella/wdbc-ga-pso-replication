@@ -1,20 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-"""
-Replica (focada no WDBC) do experimento:
-- Seleção de atributos via Algoritmo Genético (GA) com params do artigo:
-  pop=150, generations=300, crossover=0.5, mutation=0.4, elite=0.1
-- Fitness do GA via PS-classifier (aqui implementado como PSO treinando classificador linear)
-- Avaliação: 30 repetições, split 80/20, métricas: accuracy/sensitivity/specificity
-- Saídas: CSV com resultados por repetição + summary + frequência de features
-
-Dependências:
-  pip install numpy pandas scikit-learn joblib
-
-Uso:
-  python replica_wdbc_ga_only.py --data ./data/wdbc.data --out ./results --jobs 8
-"""
+""" Dependências:
+  pip install numpy pandas scikit-learn joblib matplotlib """
 
 from __future__ import annotations
 
@@ -208,10 +196,10 @@ def mask_key(mask: np.ndarray) -> bytes:
     return np.packbits(mask.astype(np.uint8)).tobytes()
 
 class GAFeatureSelector:
-    """
-    GA (wrapper) para selecionar features.
-    Fitness do GA: accuracy obtida pelo PSO-classifier no TREINO (como wrapper).
-    """
+    
+    """ GA  para selecionar features.
+    Fitness do GA: accuracy obtida pelo PSO-classifier no TREINO (como wrapper). """
+
     def __init__(self, ga: GAParams, pso: PSOParams):
         self.ga = ga
         self.pso = pso
